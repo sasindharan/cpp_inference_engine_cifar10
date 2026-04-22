@@ -69,6 +69,7 @@ cmake --build .
 
 ## RUN THE CPP ENGINE
 cd build
+
 .\engine.exe
 
 <!-- This will:
@@ -80,15 +81,21 @@ Save outputs to data/output/ -->
 cd tests
 
 python test_conv.py
+
 python test_bn.py
+
 python test_relu.py
+
 python test_maxpool.py
+
 python test_fc.py
+
 python test_softmax.py
 
 ## RUN THE MODEL TEST
 
 cd tests
+
 python test_model.py
 
 ## INTERPRETING RESULTS
@@ -97,19 +104,27 @@ python test_model.py
 Each test prints:
 
 Max diff: <value>
+
 PASS / FAIL
+
 If PASS, the operator is correct
+
 Small differences (~1e-6) are expected due to floating-point precision
 
 ### MODEL TESTING
 Max diff : ~1e-7
+
 Mean diff: small
+
 MATCH
+
 MATCH → C++ and PyTorch outputs are equivalent
+
 Differences around 1e-7 are normal for FP32
 
 # EXECUTION LOGS
 conv1 → conv → 14 ms → PASS
+
 relu1 → relu → 1 ms → PASS
 
 <!-- These logs show:
