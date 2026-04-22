@@ -4,44 +4,44 @@ The implementation also includes unit testing for each operator and full model v
 
 # FOLDER STRUCTURE
 
-cpp_inference_engine/
-│
-├── Operators/
-│   ├── src/        # Operator implementations (conv, bn, relu, etc.)
-│   └── include/    # Header files for operators
-│
-├── utilities/
-│   ├── src/        # Utility functions (I/O, logging, comparison)
-│   └── include/
-│
-├── src/
-│   └── config_engine.cpp   # Main execution engine
-│
-├── include/        # Common headers
-│
-├── Test_Operators/ # (Optional structure for operator tests)
-│
-├── tests/          # Python test files (unit + model testing)
-│
-├── data/
-│   ├── input/      # Input tensors
-│   ├── weights/    # Model weights
-│   ├── output/     # C++ outputs
-│   └── reference/  # PyTorch reference outputs
-│
-├── configs/
-│   └── json/
-│       ├── model.json        # Full model config
-│       └── *_test.json       # Unit test configs
-│
-├── report/
-│   └── report.txt
-│
-├── build/          # CMake build directory
-│
-├── CMakeLists.txt
-├── Readme.txt
-└── .gitignore
+``` cpp_inference_engine/
+    │
+    ├── Operators/
+    │   ├── src/        # Operator implementations (conv, bn, relu, etc.)
+    │   └── include/    # Header files for operators
+    │
+    ├── utilities/
+    │   ├── src/        # Utility functions (I/O, logging, comparison)
+    │   └── include/
+    │
+    ├── src/
+    │   └── config_engine.cpp   # Main execution engine
+    │
+    ├── include/        # Common headers
+    │
+    ├── Test_Operators/ # (Optional structure for operator tests)
+    │
+    ├── tests/          # Python test files (unit + model testing)
+    │
+    ├── data/
+    │   ├── input/      # Input tensors
+    │   ├── weights/    # Model weights
+    │   ├── output/     # C++ outputs
+    │   └── reference/  # PyTorch reference outputs
+    │
+    ├── configs/
+    │   └── json/
+    │       ├── model.json        # Full model config
+    │       └── *_test.json       # Unit test configs
+    │
+    ├── report/
+    │   └── report.txt
+    │
+    ├── build/          # CMake build directory
+    │
+    ├── CMakeLists.txt
+    ├── Readme.txt
+    └── .gitignore  ```
 
 # OS / TOOLS / VERSION USED
 
