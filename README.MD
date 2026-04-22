@@ -48,12 +48,18 @@ The implementation also includes unit testing for each operator and full model v
 # OS / TOOLS / VERSION USED
 
 Operating System: Windows 10/11
+
 Compiler: GCC (MinGW / WinLibs)
+
 Build System: CMake (Ninja generator)
+
 Language: C++ (C++17)
+
 Python Version: Python 3.x
+
 Libraries Used:
 NumPy (for testing)
+
 PyTorch (for model validation)
 
 # BUILD AND RUN INSTRUCTIONS
