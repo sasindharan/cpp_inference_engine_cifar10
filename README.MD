@@ -3,8 +3,8 @@ The system follows a config-driven approach, where the model architecture is def
 The implementation also includes unit testing for each operator and full model validation by comparing outputs with a PyTorch implementation.
 
 # FOLDER STRUCTURE
-
-``` cpp_inference_engine/
+``` 
+    cpp_inference_engine/
     │
     ├── Operators/
     │   ├── src/        # Operator implementations (conv, bn, relu, etc.)
@@ -41,7 +41,9 @@ The implementation also includes unit testing for each operator and full model v
     │
     ├── CMakeLists.txt
     ├── Readme.txt
-    └── .gitignore  ```
+    └── .gitignore 
+
+``` 
 
 # OS / TOOLS / VERSION USED
 
