@@ -58,9 +58,13 @@ PyTorch (for model validation)
 
 ## BUILD THE PROJECT
 cd cpp_inference_engine
+
 mkdir build
+
 cd build
+
 cmake ..
+
 cmake --build .
 
 ## RUN THE CPP ENGINE
