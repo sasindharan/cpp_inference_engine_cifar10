@@ -1,0 +1,18 @@
+{
+    "layers": [
+        {
+            "name": "pool_test",
+            "type": "maxpool",
+            "input": "../data/input/pool_input.bin",
+            "output": "../data/output/pool_output.bin",
+            "input_shape": [
+                1,
+                3,
+                28,
+                28
+            ],
+            "kernel_size": 2,
+            "stride": 2
+        }
+    ]
+}

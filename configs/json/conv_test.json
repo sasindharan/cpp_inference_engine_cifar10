@@ -1,0 +1,27 @@
+{
+    "layers": [
+        {
+            "name": "conv_test",
+            "type": "conv",
+            "input": "../data/input/conv_input.bin",
+            "output": "../data/output/conv_output.bin",
+            "weights": "../data/input/conv_weight.bin",
+            "bias": "../data/input/conv_bias.bin",
+            "input_shape": [
+                1,
+                3,
+                28,
+                28
+            ],
+            "output_shape": [
+                1,
+                10,
+                0,
+                0
+            ],
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1
+        }
+    ]
+}

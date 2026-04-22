@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "name": "fc_test",
+            "type": "fc",
+            "input": "../data/input/fc_input.bin",
+            "output": "../data/output/fc_output.bin",
+            "weights": "../data/input/fc_weight.bin",
+            "bias": "../data/input/fc_bias.bin",
+            "input_shape": [
+                1,
+                4096
+            ],
+            "output_shape": [
+                1,
+                128
+            ]
+        }
+    ]
+}

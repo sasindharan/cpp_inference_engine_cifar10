@@ -1,0 +1,10 @@
+{
+    "layers": [
+        {
+            "name": "relu_test",
+            "type": "relu",
+            "input": "../data/input/relu_input.bin",
+            "output": "../data/output/relu_output.bin"
+        }
+    ]
+}

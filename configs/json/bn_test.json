@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "name": "bn_test",
+            "type": "batchnorm",
+            "input": "../data/input/bn_input.bin",
+            "output": "../data/output/bn_output.bin",
+            "weight": "../data/input/bn_weight.bin",
+            "bias": "../data/input/bn_bias.bin",
+            "running_mean": "../data/input/bn_mean.bin",
+            "running_var": "../data/input/bn_var.bin",
+            "input_shape": [
+                1,
+                32,
+                32,
+                32
+            ]
+        }
+    ]
+}

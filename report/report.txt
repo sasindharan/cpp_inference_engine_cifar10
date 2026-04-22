@@ -1,0 +1,96 @@
+In this project, I implemented a deep learning inference engine in C++ using FP32 precision. 
+The goal was to manually implement core operators such as Convolution, Batch Normalization, ReLU, Max Pooling, Fully Connected, 
+and Softmax, and then use them to execute a CIFAR-10 model.
+The system is designed using a config-driven approach, where the model architecture is defined in a JSON file and executed dynamically. 
+This makes the engine flexible and easier to debug.
+
+
+------UTILITY FUNCTIONS------
+I implemented reusable utility functions to support the execution pipeline. These include:
+
+Reading binary files for inputs and weights
+Writing outputs to binary files
+Comparing outputs with reference values
+Logging execution details
+
+These utilities were essential for debugging and validating intermediate outputs.
+
+
+------TEST RESULTS------
+1. Unit Testing
+
+Each operator was tested independently with at least 5 test cases by varying input sizes and parameters.
+
+Convolution:
+Tested with different input sizes, kernel sizes, stride, and padding.
+Result: All test cases passed (max diff ≈ 1e-6)
+
+Batch Normalization:
+Tested with varying channel sizes and parameters.
+Result: All test cases passed (max diff ≈ 1e-6)
+
+ReLU:
+Verified correct activation behavior (negative → 0).
+Result: All test cases passed
+
+Max Pooling:
+Tested with different kernel sizes and strides.
+Result: All test cases passed
+
+Fully Connected:
+Tested multiple input-output combinations including large inputs (4096 → 128).
+Result: Passed with tolerance ≈ 1e-3
+
+Softmax:
+Verified output sums to 1 and matches reference.
+Result: Passed (max diff ≈ 1e-8)
+
+2. Model Testing (CIFAR-10)
+The model was reconstructed using model.json and executed in both C++ and PyTorch.
+
+Output Comparison:
+
+Max diff  : 1.7881393e-07
+Mean diff : 8.456409e-08
+OUTPUT MATCH 
+
+Result: Outputs match within floating-point precision.
+
+
+------OBSERVATIONS------
+
+1. Config-based execution made the model flexible and easier to manage
+2. Modular operator design simplified debugging
+3. Floating-point differences were very small (~1e-7)
+4. Skip connections required careful shape handling
+5. File-based input/output helped in validation
+
+------PERFORMANCE INSIGHTS------
+
+1. Convolution layers took the most time (~200 ms per layer)
+2. BatchNorm and ReLU were very fast (<5 ms)
+3. Fully connected layers were efficient except for large inputs
+4. Execution time was consistent across runs
+5. Logging helped identify performance-heavy layers
+
+------CHALLENGES FACED------
+
+1. Tensor shape mismatches during convolution and FC layers
+2. Skip connection errors due to incorrect channel assumptions
+3. File path issues with relative directories
+4. Floating-point differences during comparison
+5. Incomplete Python model causing mismatches initially
+
+    -------HOW IT IS SOLVED------
+    1. Carefully tracked tensor shapes at each layer
+    2. Verified weight dimensions using file size calculations
+    3. Standardized working directory and paths
+    4. Used tolerance-based comparison for FP32 values
+    5. Switched to config-driven Python implementation for consistency
+
+------FINAL STATUS------
+ Unit Testing Completed
+ Model Testing Completed
+ Observations Included
+ Performance Insights Included
+ Challenges Faced Included
